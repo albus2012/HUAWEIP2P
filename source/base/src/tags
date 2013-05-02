@@ -1,0 +1,170 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Acceptor	Acceptor.cpp	/^Acceptor::Acceptor(EventLoop* loop, const InetAddress& listenAddr)$/;"	f	class:Acceptor
+Channel	Channel.cpp	/^Channel::Channel(EventLoop* loop, int fd__)$/;"	f	class:Channel
+CurrentThread	Thread.cpp	/^namespace CurrentThread$/;"	n	namespace:huaweip2p	file:
+EXE	Makefile	/^EXE = $/;"	m
+EventLoop	EventLoop.cpp	/^EventLoop::EventLoop()$/;"	f	class:EventLoop
+EventLoopThread	EventLoopThread.cpp	/^EventLoopThread::EventLoopThread(const ThreadInitCallback& cb)$/;"	f	class:EventLoopThread
+EventLoopThreadPool	EventLoopThreadPool.cpp	/^EventLoopThreadPool::EventLoopThreadPool(EventLoop* baseLoop)$/;"	f	class:EventLoopThreadPool
+INC_DIRS	Makefile	/^INC_DIRS = $(ROOT)\/source\/base\/inc$/;"	m
+IgnoreSigPipe	EventLoop.cpp	/^  IgnoreSigPipe()$/;"	f	class:__anon1::IgnoreSigPipe
+IgnoreSigPipe	EventLoop.cpp	/^class IgnoreSigPipe$/;"	c	namespace:__anon1	file:
+InetAddress	InetAddress.cpp	/^InetAddress::InetAddress(const string& ip, uint16_t port)$/;"	f	class:InetAddress
+InetAddress	InetAddress.cpp	/^InetAddress::InetAddress(uint16_t port)$/;"	f	class:InetAddress
+LIB	Makefile	/^LIB = libbase.a$/;"	m
+LINK_LIBS	Makefile	/^LINK_LIBS=$/;"	m
+PollPoller	PollPoller.cpp	/^PollPoller::PollPoller(EventLoop* loop)$/;"	f	class:PollPoller
+SA	SocketsOps.cpp	/^typedef struct sockaddr SA;$/;"	t	namespace:__anon2	typeref:struct:__anon2::sockaddr	file:
+TcpConnection	TcpConnection.cpp	/^TcpConnection::TcpConnection(EventLoop* loop,$/;"	f	class:TcpConnection
+TcpServer	TcpServer.cpp	/^TcpServer::TcpServer(EventLoop* loop,$/;"	f	class:TcpServer
+Thread	Thread.cpp	/^Thread::Thread(const ThreadFunc& func, const string& n)$/;"	f	class:Thread
+ThreadNameInitializer	Thread.cpp	/^  ThreadNameInitializer()$/;"	f	class:huaweip2p::ThreadNameInitializer
+ThreadNameInitializer	Thread.cpp	/^class ThreadNameInitializer$/;"	c	namespace:huaweip2p	file:
+TimerQueue	TimerQueue.cpp	/^TimerQueue::TimerQueue(EventLoop* loop)$/;"	f	class:TimerQueue
+Timestamp	Timestamp.cpp	/^Timestamp::Timestamp(int64_t microseconds)$/;"	f	class:Timestamp
+__STDC_FORMAT_MACROS	Timestamp.cpp	5;"	d	file:
+__STDC_FORMAT_MACROS	Timestamp.cpp	7;"	d	file:
+__STDC_LIMIT_MACROS	TimerQueue.cpp	1;"	d	file:
+abortNotInLoopThread	EventLoop.cpp	/^void EventLoop::abortNotInLoopThread()$/;"	f	class:EventLoop
+accept	Socket.cpp	/^int Socket::accept(InetAddress* peeraddr)$/;"	f	class:Socket
+accept	SocketsOps.cpp	/^int sockets::accept(int sockfd, struct sockaddr_in* addr)$/;"	f	class:sockets
+addTimer	TimerQueue.cpp	/^TimerId TimerQueue::addTimer(const TimerCallback& cb, $/;"	f	class:TimerQueue
+addTimerInLoop	TimerQueue.cpp	/^void TimerQueue::addTimerInLoop(Timer* timer)$/;"	f	class:TimerQueue
+afterFork	Thread.cpp	/^void afterFork()$/;"	f	namespace:huaweip2p
+bindAddress	Socket.cpp	/^void Socket::bindAddress(const InetAddress& addr)$/;"	f	class:Socket
+bindOrDie	SocketsOps.cpp	/^void sockets::bindOrDie(int sockfd, const struct sockaddr_in& addr)$/;"	f	class:sockets
+cacheTid	Thread.cpp	/^void CurrentThread::cacheTid()$/;"	f	class:CurrentThread
+cancel	EventLoop.cpp	/^void EventLoop::cancel(TimerId timerId)$/;"	f	class:EventLoop
+cancel	TimerQueue.cpp	/^void TimerQueue::cancel(TimerId timerId)$/;"	f	class:TimerQueue
+cancelInLoop	TimerQueue.cpp	/^void TimerQueue::cancelInLoop(TimerId timerId)$/;"	f	class:TimerQueue
+close	SocketsOps.cpp	/^void sockets::close(int sockfd)$/;"	f	class:sockets
+connect	SocketsOps.cpp	/^int sockets::connect(int sockfd, const struct sockaddr_in& addr)$/;"	f	class:sockets
+connectDestroyed	TcpConnection.cpp	/^void TcpConnection::connectDestroyed()$/;"	f	class:TcpConnection
+connectEstablished	TcpConnection.cpp	/^void TcpConnection::connectEstablished()$/;"	f	class:TcpConnection
+createEventfd	EventLoop.cpp	/^int createEventfd()$/;"	f	namespace:__anon1
+createNonblockingOrDie	SocketsOps.cpp	/^int sockets::createNonblockingOrDie()$/;"	f	class:sockets
+createTimerfd	TimerQueue.cpp	/^int createTimerfd()$/;"	f	namespace:huaweip2p
+defaultConnectionCallback	TcpConnection.cpp	/^void huaweip2p::defaultConnectionCallback(const TcpConnectionPtr& conn)$/;"	f	class:huaweip2p
+defaultMessageCallback	TcpConnection.cpp	/^void huaweip2p::defaultMessageCallback(const TcpConnectionPtr&,$/;"	f	class:huaweip2p
+doPendingFunctors	EventLoop.cpp	/^void EventLoop::doPendingFunctors()$/;"	f	class:EventLoop
+fillActiveChannels	PollPoller.cpp	/^void PollPoller::fillActiveChannels(int numEvents,$/;"	f	class:PollPoller
+fromIpPort	SocketsOps.cpp	/^void sockets::fromIpPort(const char *ip, uint16_t port,$/;"	f	class:sockets
+getEventLoopOfCurrentThread	EventLoop.cpp	/^EventLoop* EventLoop::getEventLoopOfCurrentThread()$/;"	f	class:EventLoop
+getExpired	TimerQueue.cpp	/^std::vector<TimerQueue::Entry> TimerQueue::getExpired(Timestamp now)$/;"	f	class:TimerQueue
+getLocalAddr	SocketsOps.cpp	/^struct sockaddr_in sockets::getLocalAddr(int sockfd)$/;"	f	class:sockets
+getNextLoop	EventLoopThreadPool.cpp	/^EventLoop* EventLoopThreadPool::getNextLoop()$/;"	f	class:EventLoopThreadPool
+getPeerAddr	SocketsOps.cpp	/^struct sockaddr_in sockets::getPeerAddr(int sockfd)$/;"	f	class:sockets
+getSocketError	SocketsOps.cpp	/^int sockets::getSocketError(int sockfd)$/;"	f	class:sockets
+gettid	Thread.cpp	/^pid_t gettid()$/;"	f	namespace:huaweip2p
+handleClose	TcpConnection.cpp	/^void TcpConnection::handleClose()$/;"	f	class:TcpConnection
+handleError	TcpConnection.cpp	/^void TcpConnection::handleError()$/;"	f	class:TcpConnection
+handleEvent	Channel.cpp	/^void Channel::handleEvent(Timestamp receiveTime)$/;"	f	class:Channel
+handleEventWithGuard	Channel.cpp	/^void Channel::handleEventWithGuard(Timestamp receiveTime)$/;"	f	class:Channel
+handleRead	Acceptor.cpp	/^void Acceptor::handleRead()$/;"	f	class:Acceptor
+handleRead	EventLoop.cpp	/^void EventLoop::handleRead()$/;"	f	class:EventLoop
+handleRead	TcpConnection.cpp	/^void TcpConnection::handleRead(Timestamp receiveTime)$/;"	f	class:TcpConnection
+handleRead	TimerQueue.cpp	/^void TimerQueue::handleRead()$/;"	f	class:TimerQueue
+handleWrite	TcpConnection.cpp	/^void TcpConnection::handleWrite()$/;"	f	class:TcpConnection
+howMuchTimeFromNow	TimerQueue.cpp	/^struct timespec howMuchTimeFromNow(Timestamp when)$/;"	f	namespace:huaweip2p
+huaweip2p	Thread.cpp	/^namespace huaweip2p$/;"	n	file:
+huaweip2p	TimerQueue.cpp	/^namespace huaweip2p$/;"	n	file:
+init	Thread.cpp	/^ThreadNameInitializer init;$/;"	m	namespace:huaweip2p	file:
+initObj	EventLoop.cpp	/^IgnoreSigPipe initObj;$/;"	m	namespace:__anon1	file:
+insert	TimerQueue.cpp	/^bool TimerQueue::insert(Timer* timer)$/;"	f	class:TimerQueue
+invalid	Timestamp.cpp	/^Timestamp Timestamp::invalid()$/;"	f	class:Timestamp
+isMainThread	Thread.cpp	/^bool CurrentThread::isMainThread()$/;"	f	class:CurrentThread
+isSelfConnect	SocketsOps.cpp	/^bool sockets::isSelfConnect(int sockfd)$/;"	f	class:sockets
+join	Thread.cpp	/^int Thread::join()$/;"	f	class:Thread
+kCRLF	Buffer.cpp	/^const char Buffer::kCRLF[] = "\\r\\n";$/;"	m	class:Buffer	file:
+kCheapPrepend	Buffer.cpp	/^const size_t Buffer::kCheapPrepend;$/;"	m	class:Buffer	file:
+kInaddrAny	InetAddress.cpp	/^static const in_addr_t kInaddrAny = INADDR_ANY;$/;"	v	file:
+kInitialSize	Buffer.cpp	/^const size_t Buffer::kInitialSize;$/;"	m	class:Buffer	file:
+kNoneEvent	Channel.cpp	/^const int Channel::kNoneEvent = 0;$/;"	m	class:Channel	file:
+kPollTimeMs	EventLoop.cpp	/^const int kPollTimeMs = 10000;$/;"	m	namespace:__anon1	file:
+kReadEvent	Channel.cpp	/^const int Channel::kReadEvent = POLLIN | POLLPRI;$/;"	m	class:Channel	file:
+kWriteEvent	Channel.cpp	/^const int Channel::kWriteEvent = POLLOUT;$/;"	m	class:Channel	file:
+listen	Acceptor.cpp	/^void Acceptor::listen()$/;"	f	class:Acceptor
+listen	Socket.cpp	/^void Socket::listen()$/;"	f	class:Socket
+listenOrDie	SocketsOps.cpp	/^void sockets::listenOrDie(int sockfd)$/;"	f	class:sockets
+loop	EventLoop.cpp	/^void EventLoop::loop()$/;"	f	class:EventLoop
+newConnection	TcpServer.cpp	/^void TcpServer::newConnection(int sockfd, const InetAddress& peerAddr)$/;"	f	class:TcpServer
+now	Timestamp.cpp	/^Timestamp Timestamp::now()$/;"	f	class:Timestamp
+numCreated_	Thread.cpp	/^AtomicInt32 Thread::numCreated_;$/;"	m	class:Thread	file:
+poll	PollPoller.cpp	/^Timestamp PollPoller::poll(int timeoutMs, ChannelList* activeChannels)$/;"	f	class:PollPoller
+printActiveChannels	EventLoop.cpp	/^void EventLoop::printActiveChannels() const$/;"	f	class:EventLoop
+queueInLoop	EventLoop.cpp	/^void EventLoop::queueInLoop(const Functor& cb)$/;"	f	class:EventLoop
+quit	EventLoop.cpp	/^void EventLoop::quit()$/;"	f	class:EventLoop
+read	SocketsOps.cpp	/^int sockets::read(int sockfd, void* buf, size_t count)$/;"	f	class:sockets
+readFd	Buffer.cpp	/^ssize_t Buffer::readFd(int fd, int* savedErrno)$/;"	f	class:Buffer
+readTimerfd	TimerQueue.cpp	/^void readTimerfd(int timerfd, Timestamp now)$/;"	f	namespace:huaweip2p
+readv	SocketsOps.cpp	/^ssize_t sockets::readv(int sockfd, const struct iovec *iov, int iovcnt)$/;"	f	class:sockets
+remove	Channel.cpp	/^void Channel::remove()$/;"	f	class:Channel
+removeChannel	EventLoop.cpp	/^void EventLoop::removeChannel(Channel* channel)$/;"	f	class:EventLoop
+removeChannel	PollPoller.cpp	/^void PollPoller::removeChannel(Channel* channel)$/;"	f	class:PollPoller
+removeConnection	TcpServer.cpp	/^void TcpServer::removeConnection(const TcpConnectionPtr& conn)$/;"	f	class:TcpServer
+removeConnectionInLoop	TcpServer.cpp	/^void TcpServer::removeConnectionInLoop(const TcpConnectionPtr& conn)$/;"	f	class:TcpServer
+reset	TimerQueue.cpp	/^void TimerQueue::reset(const std::vector<Entry>& expired, Timestamp now)$/;"	f	class:TimerQueue
+resetTimerfd	TimerQueue.cpp	/^void resetTimerfd(int timerfd, Timestamp expiration)$/;"	f	namespace:huaweip2p
+reventsToString	Channel.cpp	/^string Channel::reventsToString() const$/;"	f	class:Channel
+runAfter	EventLoop.cpp	/^TimerId EventLoop::runAfter(double delay, const TimerCallback& cb)$/;"	f	class:EventLoop
+runAt	EventLoop.cpp	/^TimerId EventLoop::runAt(const Timestamp& time, const TimerCallback& cb)$/;"	f	class:EventLoop
+runEvery	EventLoop.cpp	/^TimerId EventLoop::runEvery(double interval, const TimerCallback& cb)$/;"	f	class:EventLoop
+runInLoop	EventLoop.cpp	/^void EventLoop::runInLoop(const Functor& cb)$/;"	f	class:EventLoop
+runInThread	Thread.cpp	/^void Thread::runInThread()$/;"	f	class:Thread
+sameType	Thread.cpp	/^  const bool sameType = boost::is_same<int, pid_t>::value;$/;"	m	namespace:huaweip2p::CurrentThread	file:
+send	TcpConnection.cpp	/^void TcpConnection::send(Buffer* buf)$/;"	f	class:TcpConnection
+send	TcpConnection.cpp	/^void TcpConnection::send(const string& message)$/;"	f	class:TcpConnection
+send	TcpConnection.cpp	/^void TcpConnection::send(const void* data, size_t len)$/;"	f	class:TcpConnection
+sendInLoop	TcpConnection.cpp	/^void TcpConnection::sendInLoop(const string& message)$/;"	f	class:TcpConnection
+sendInLoop	TcpConnection.cpp	/^void TcpConnection::sendInLoop(const void* data, size_t len)$/;"	f	class:TcpConnection
+setKeepAlive	Socket.cpp	/^void Socket::setKeepAlive(bool on)$/;"	f	class:Socket
+setNonBlockAndCloseOnExec	SocketsOps.cpp	/^void setNonBlockAndCloseOnExec(int sockfd)$/;"	f	namespace:__anon2
+setReuseAddr	Socket.cpp	/^void Socket::setReuseAddr(bool on)$/;"	f	class:Socket
+setTcpNoDelay	Socket.cpp	/^void Socket::setTcpNoDelay(bool on)$/;"	f	class:Socket
+setTcpNoDelay	TcpConnection.cpp	/^void TcpConnection::setTcpNoDelay(bool on)$/;"	f	class:TcpConnection
+setThreadNum	TcpServer.cpp	/^void TcpServer::setThreadNum(int numThreads)$/;"	f	class:TcpServer
+shutdown	TcpConnection.cpp	/^void TcpConnection::shutdown()$/;"	f	class:TcpConnection
+shutdownInLoop	TcpConnection.cpp	/^void TcpConnection::shutdownInLoop()$/;"	f	class:TcpConnection
+shutdownWrite	Socket.cpp	/^void Socket::shutdownWrite()$/;"	f	class:Socket
+shutdownWrite	SocketsOps.cpp	/^void sockets::shutdownWrite(int sockfd)$/;"	f	class:sockets
+sockaddr_cast	SocketsOps.cpp	/^SA* sockaddr_cast(struct sockaddr_in* addr)$/;"	f	namespace:__anon2
+sockaddr_cast	SocketsOps.cpp	/^const SA* sockaddr_cast(const struct sockaddr_in* addr)$/;"	f	namespace:__anon2
+start	EventLoopThreadPool.cpp	/^void EventLoopThreadPool::start(const ThreadInitCallback& cb)$/;"	f	class:EventLoopThreadPool
+start	TcpServer.cpp	/^void TcpServer::start()$/;"	f	class:TcpServer
+start	Thread.cpp	/^void Thread::start()$/;"	f	class:Thread
+startLoop	EventLoopThread.cpp	/^EventLoop* EventLoopThread::startLoop()$/;"	f	class:EventLoopThread
+startThread	Thread.cpp	/^void* Thread::startThread(void* obj)$/;"	f	class:Thread
+t_cachedTid	Thread.cpp	/^  __thread int t_cachedTid = 0;$/;"	m	namespace:huaweip2p::CurrentThread	file:
+t_loopInThisThread	EventLoop.cpp	/^__thread EventLoop* t_loopInThisThread = 0;$/;"	m	namespace:__anon1	file:
+t_threadName	Thread.cpp	/^  __thread const char* t_threadName = "unknown";$/;"	m	namespace:huaweip2p::CurrentThread	file:
+t_tidString	Thread.cpp	/^  __thread char t_tidString[32];$/;"	m	namespace:huaweip2p::CurrentThread	file:
+threadFunc	EventLoopThread.cpp	/^void EventLoopThread::threadFunc()$/;"	f	class:EventLoopThread
+tie	Channel.cpp	/^void Channel::tie(const boost::shared_ptr<void>& obj)$/;"	f	class:Channel
+toFormattedString	Timestamp.cpp	/^std::string Timestamp::toFormattedString() const$/;"	f	class:Timestamp
+toIp	InetAddress.cpp	/^string InetAddress::toIp() const$/;"	f	class:InetAddress
+toIp	SocketsOps.cpp	/^void sockets::toIp(char *buf, size_t size,$/;"	f	class:sockets
+toIpPort	InetAddress.cpp	/^string InetAddress::toIpPort() const$/;"	f	class:InetAddress
+toIpPort	SocketsOps.cpp	/^void sockets::toIpPort(char *buf, size_t size, $/;"	f	class:sockets
+toString	Timestamp.cpp	/^std::string Timestamp::toString() const$/;"	f	class:Timestamp
+update	Channel.cpp	/^void Channel::update()$/;"	f	class:Channel
+updateChannel	EventLoop.cpp	/^void EventLoop::updateChannel(Channel* channel)$/;"	f	class:EventLoop
+updateChannel	PollPoller.cpp	/^void PollPoller::updateChannel(Channel* channel)$/;"	f	class:PollPoller
+waitForSeconds	Condition.cpp	/^bool huaweip2p::Condition::waitForSeconds(int seconds)$/;"	f	class:huaweip2p::Condition
+wakeup	EventLoop.cpp	/^void EventLoop::wakeup()$/;"	f	class:EventLoop
+write	SocketsOps.cpp	/^ssize_t sockets::write(int sockfd, const void *buf, size_t count)$/;"	f	class:sockets
+~Acceptor	Acceptor.cpp	/^Acceptor::~Acceptor()$/;"	f	class:Acceptor
+~Channel	Channel.cpp	/^Channel::~Channel()$/;"	f	class:Channel
+~EventLoop	EventLoop.cpp	/^EventLoop::~EventLoop()$/;"	f	class:EventLoop
+~EventLoopThread	EventLoopThread.cpp	/^EventLoopThread::~EventLoopThread()$/;"	f	class:EventLoopThread
+~EventLoopThreadPool	EventLoopThreadPool.cpp	/^EventLoopThreadPool::~EventLoopThreadPool()$/;"	f	class:EventLoopThreadPool
+~PollPoller	PollPoller.cpp	/^PollPoller::~PollPoller()$/;"	f	class:PollPoller
+~Socket	Socket.cpp	/^Socket::~Socket()$/;"	f	class:Socket
+~TcpConnection	TcpConnection.cpp	/^TcpConnection::~TcpConnection()$/;"	f	class:TcpConnection
+~TcpServer	TcpServer.cpp	/^TcpServer::~TcpServer()$/;"	f	class:TcpServer
+~Thread	Thread.cpp	/^Thread::~Thread() { }$/;"	f	class:Thread
+~TimerQueue	TimerQueue.cpp	/^TimerQueue::~TimerQueue()$/;"	f	class:TimerQueue
