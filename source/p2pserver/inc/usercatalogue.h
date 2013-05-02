@@ -4,8 +4,10 @@
 #include <string>
 #include <set>
 #include <map>
+#include <queue>
 
 using namespace std;
+
 
 typedef struct UserInfo
 {
@@ -39,7 +41,6 @@ class UserCatalogue
   string processIP(const string ip);
   //typedef set<UserInfo, UserInfoSortCriterion> USET;
   typedef map<string, set<UserInfo> > UserMap;
- 
   UserMap users;
 
 

@@ -21,6 +21,7 @@ void UserCatalogue::insertUser(const string ip, int file)
   if(iter != users.end())
   {
     uset = iter->second;
+    
   }
   usr.userIP = ip;
   usr.userFile = file;
