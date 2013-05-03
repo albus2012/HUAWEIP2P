@@ -25,7 +25,7 @@ P2PServer::P2PServer(EventLoop* loop, const InetAddress& listenAddr)
              boost::bind(&P2PServer::onConnection, this, _1));
   server_.setMessageCallback(
              boost::bind(&LengthHeaderCodec::onMessage, &codec_, _1, _2, _3));
-  server_.setThreadNum(4);
+  //server_.setThreadNum(4);
  }
 
 
@@ -46,15 +46,16 @@ void P2PServer::onStringMessage(const TcpConnectionPtr& conn,
   int      id = message[1]; 
   string   ip = message.substr(2,4);
   int reqfile = message[6];
-  
-  catalogue_->insertUser(ip, reqfile);
-  cout << endl 
+  //catalogue_->insertUser(ip, reqfile); 
+    cout << endl 
        << "test" << catalogue_->hasNeighbor(ip) 
        << message 
        << endl;
   string ret;
   if(type == 'a')
   {
+    catalogue_->insertUser(ip, reqfile);
+
     ret.append("b0");
     ret.append(processMessage(ip));
     cout << endl << ret << endl;

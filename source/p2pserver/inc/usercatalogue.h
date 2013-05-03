@@ -6,6 +6,7 @@
 #include <map>
 #include <queue>
 
+#define MAXQUE 3
 using namespace std;
 
 
@@ -39,9 +40,13 @@ class UserCatalogue
 
  private:
   string processIP(const string ip);
+  bool isClientWorking(const string ip);
   //typedef set<UserInfo, UserInfoSortCriterion> USET;
   typedef map<string, set<UserInfo> > UserMap;
+  typedef map<string, queue<string> > UserQue;
+  UserQue userQue;
   UserMap users;
+  const int kMaxCacheUsers;
 
 
 };
