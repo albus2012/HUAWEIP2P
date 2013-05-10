@@ -16,7 +16,11 @@
 #include <map>
 using namespace huaweip2p;
 using namespace std;
+
+//the local neighbor node info:<ip, updatafile>
 map<string, int> P2PCServer::neiIP;
+
+//Init the local updatafile
 int P2PCServer::updateFile = 1;
 string P2PCServer::IP;
 
@@ -29,7 +33,8 @@ string P2PCServer::getIP()
 {
   return IP;
 }
-  
+
+//When there is no info of updatafile, just assume it's 101
 void P2PCServer::insertNeiIP(string ip)
 {
   P2PCServer::insertNeiIP(ip, 101);
@@ -56,6 +61,7 @@ string P2PCServer::findNeiIP(int level)
     if(iter->second > level && iter->first != "1111")
       return iter->first;
   }
+  //If there is no neighbor info, just return the server info
   return "1111";
 }
   
@@ -64,6 +70,9 @@ int P2PCServer::getFile()
 {
   return updateFile;
 }
+
+//If the source's > local's, then local's updatefile ++
+//else return 0 
 int P2PCServer::processUpdateFile(int level)
 {
   //int temp = atoi(level.c_str()); 
@@ -88,6 +97,8 @@ P2PClient::P2PClient(EventLoop* loop, const InetAddress& serverAddr)
       boost::bind(&LengthHeaderCodec::onMessage, &codec_, _1, _2, _3));
   client_->enableRetry();
 }
+
+//Setup a new connection to newAddr
 bool P2PClient::changeServer(const InetAddress& newAddr, EventLoop* loop)
 {
   if(connection_)
@@ -98,20 +109,22 @@ bool P2PClient::changeServer(const InetAddress& newAddr, EventLoop* loop)
   //delete client_;  
 
   int sockfd = sockets::createOrDie();
-  //client_->setConnectionCallback(boost::bind(&P2PClient::onTestConnection, this, _1));
+  
   int ret = sockets::connect(sockfd, newAddr.getSockAddrInet());
+  
+  //Test whether the destination is working or not
+  //If it is not working, return false
+  //else setup a new connection
   if(ret < 0)
   {
     cout << "sockets::connect:" << errno << endl;
     return false;
-    //client_->setConnectionCallback(boost::bind(&P2PClient::onConnection, this, _1));
-    //return;
   }
   else
   {
     cout << "ret ==0" <<ret << endl;
     sockets::close(sockfd);
-   // client_->setConnectionCallback(boost::bind(&P2PClient::onConnection, this, _1));
+ 
   }
   delete client_;  
   client_ = new TcpClient(loop, newAddr, "P2PClient");
@@ -133,22 +146,22 @@ bool P2PClient::changeServer(const InetAddress& newAddr)
   
 void P2PClient::write(const StringPiece& message)
 {
-  cout << endl << "write" << message.data() << endl;
-  cout << "pid=" << getpid() << endl;
-  //MutexLockGuard lock(mutex_);
-  cout << endl << "lock" << endl;
+  //cout << endl << "write" << message.data() << endl;  
   if (connection_)
   {
     cout << endl << "p2pclient write" << endl;
     codec_.send(connection_, message);
   }
   else
-    cout << endl << "xxxxxxx";
+    cout << endl << "Connection failed";
 }
+
 void P2PClient::onTestConnection(const TcpConnectionPtr& conn)
 {
   cout << " onTestConnection" << endl;
 }
+
+//Callback funtion on the connection
 void P2PClient::onConnection(const TcpConnectionPtr& conn)
 {
   cout << conn->localAddress().toIpPort() << " -> "
@@ -156,7 +169,6 @@ void P2PClient::onConnection(const TcpConnectionPtr& conn)
        << (conn->connected() ? "UP" : "DOWN")
        << endl;
 
-  //MutexLockGuard lock(mutex_);
   if (conn->connected())
   {
     setState(kConnected);
@@ -175,13 +187,11 @@ void P2PClient::onConnection(const TcpConnectionPtr& conn)
        string mes("c0");
        mes.append(P2PCServer::getIP());
        mes.append(1, (char)P2PCServer::getFile());
-       //string mes = "c022220"; 
        write(mes);
     }
   }
   else
   {
-    cout << " xxxxxxxxx11" << endl;
     connection_.reset();
     cout << "is==" << (getState() == kConnecting) << endl;
     if(getState() == kConnected)
@@ -201,7 +211,7 @@ void P2PClient::onStringMessage(const TcpConnectionPtr&,
                        const string& message,
                        Timestamp)
 {
-  printf("<<< %s\n", message.c_str());
+  //printf("<<< %s\n", message.c_str());
   int res = processMessage(message);
   int upfile = P2PCServer::getFile();
   sleep(1);
